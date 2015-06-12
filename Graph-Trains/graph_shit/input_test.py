@@ -1,3 +1,6 @@
+import sys
+
+
 """
 user_input = "A-E-B-C-D"
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -18,7 +21,7 @@ for index in letter_input:
 line = '1234567890'
 """
 
-
+"""
 def split_input(path):
     letter_input = path.replace("-", "")
     n = 2
@@ -27,3 +30,15 @@ def split_input(path):
 split_input("A-E-B-C-D")
 split_input("A-B-C")
 split_input("A-B")
+"""
+
+user_input = []
+
+while True:
+    choice = input("Enter: ")
+    if choice == 'exit':
+        break
+    else:
+        user_input.append(choice)
+
+print(user_input)
