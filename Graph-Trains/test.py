@@ -12,12 +12,12 @@ G.add_edge('E', 'B', weight=3)
 G.add_edge('A', 'E', weight=7)
 
 #print(G.edges())
-# print([p for p in nx.all_simple_paths(G, source='A', target='C', cutoff=4)])
+# print([p for p in nx.all_simple_paths(G, source='A', target='C', cutoff=3)])
 #print(nx.shortest_path(G, source='A', target='C', weight=10))
 # print(nx.all_pairs_dijkstra_path_length(G))
 # print(nx.shortest_path(G, source='A', target='E'))
 
-
+"""
 def split_input(path):
     letter_input = path.replace("-", "")
     n = 2
@@ -36,3 +36,29 @@ def first_five():
 def eight():
     return nx.dijkstra_path_length(G, source='A', target='C')
 print(eight())
+"""
+
+
+# print(nx.all_neighbors(G, 'C'))
+# print(G.successors('C'))
+# print(nx.single_source_dijkstra_path(G, source='A'))
+
+"""
+def six():
+    neighbours = G.successors('C')
+    for neighbour in neighbours:
+        result = ['C'] + nx.shortest_path(G, source=neighbour, target='C')
+        if len(result) < 5:
+            print(result)
+"""
+
+
+"""
+def nine():
+    neighbours = G.successors('B')
+    for neighbour in neighbours:
+        result = nx.dijkstra_path_length(
+            G, source='B', target=neighbour) + nx.dijkstra_path_length(
+            G, source=neighbour, target='B')
+        print(result)
+"""
