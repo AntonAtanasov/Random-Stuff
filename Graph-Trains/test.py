@@ -15,7 +15,7 @@ G.add_edge('A', 'E', weight=7)
 # print([p for p in nx.all_simple_paths(G, source='A', target='C', cutoff=3)])
 #print(nx.shortest_path(G, source='A', target='C', weight=10))
 # print(nx.all_pairs_dijkstra_path_length(G))
-# print(nx.shortest_path(G, source='A', target='E'))
+print([p for p in nx.all_shortest_paths(G, source='A', target='C')])
 
 """
 def split_input(path):
